@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mohammedomer.drapp.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    >
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightorange"
+                android:text="Dr App"
+                android:layout_gravity="center"
+                android:layout_marginTop="190dp"
+                android:textSize="60sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="344dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightorange"
+                android:text="Welcome To DrApp !"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonsub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/b"
+            android:background="@drawable/buttonstyle"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onButtonClick" />
+    </LinearLayout>
+
+</LinearLayout>
