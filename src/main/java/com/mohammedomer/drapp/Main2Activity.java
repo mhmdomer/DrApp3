@@ -56,26 +56,8 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         heartRate = (TextView) findViewById(R.id.heart_rate_value);
         temperature = (TextView) findViewById(R.id.temp_value);
-        button1();
+        configureBluetooth();
     }
-
-    private Runnable hUpdate = new Runnable() {
-        public void run() {
-            hValue = random.nextInt(80) + 50;
-            heartRate.setText(hValue + " r.p.m");
-            hHandler.postDelayed(this, 2000);
-            if (hValue >= 125) addNotification();
-        }
-    };
-
-    private Runnable tUpdate = new Runnable() {
-        public void run() {
-            tValue = random.nextInt(9) + 33;
-            temperature.setText(tValue + " °C");
-            hHandler.postDelayed(this, 3000);
-            if (tValue >= 120) addNotification();
-        }
-    };
 
     public void call(View view){
         Intent intent = new Intent(Intent.ACTION_DIAL);
@@ -191,7 +173,7 @@ public class Main2Activity extends AppCompatActivity {
         });
     }
 
-    public void button1(){
+    public void configureBluetooth(){
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
 
         // Get a set of currently paired devices and append to pairedDevices list
